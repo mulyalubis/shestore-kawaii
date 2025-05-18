@@ -1,0 +1,721 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* navbar */
+
+header {
+    width: 100dvw;
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    background-image: linear-gradient(to top, #FDEE00, #FF91AF);
+    color: white;
+    font-size: 1.1rem;
+}
+
+header :is(figure, nav ul) {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+header .logo img {
+    width: 150px;
+    height: 60px;
+    object-fit: cover;
+}
+
+header .logo figcaption {
+    margin-left: -10px;
+    place-self: center;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-size: 1.25rem;
+    font-style: normal;
+}
+
+header nav ul li a {
+    display: flex;
+    padding: 0 20px;
+    text-decoration: none;
+    color: white;
+    font-family: "Fredoka", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+header nav ul li a i {
+    visibility: hidden;
+}
+/* akhir navbar */
+
+
+/* halaman profile dan 3 product */
+main .landing-page {
+    height: 100dvh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 1.5rem;
+    place-content: start center;
+    place-items: center;
+    background-image: linear-gradient(to right bottom,#FF91AF, #fdec00d6);
+}
+
+.landing-page .about-toko {
+    width: 35vw;
+    padding-top: 5rem;
+    place-self: start center;
+    font-family: "Fredoka", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 102;
+}
+
+.landing-page .about-toko p {
+    font-size: 3rem;
+}
+
+.landing-page .about-toko h2 {
+    font-size: 4rem;
+    font-family: "Pacifico", cursive;
+    font-weight: 200;
+}
+
+.landing-page .about-toko .sosial-media {
+    text-align: center;
+    height: 60px;
+}
+
+.landing-page .about-toko .sosial-media a {
+    text-decoration: none;
+    width: min-content;
+    margin: 0 1rem;
+}
+
+.landing-page .about-toko .sosial-media a i {
+    transition: .8s linear;
+    font-size: 2.2rem;
+    color: white;
+}
+
+.landing-page .about-toko .sosial-media a:hover .ph-instagram-logo {
+    background-image: linear-gradient(
+        45deg,
+        #feda75,
+        #fa7e1e,
+        #d62976,
+        #962fbf,
+        #4f5bd5
+    );
+    background-clip: text;
+    color: transparent;
+}
+
+
+.landing-page .about-toko .sosial-media a:hover .ph-tiktok-logo {
+    background-image: linear-gradient(
+        135deg,
+        #000
+    );
+    background-clip: text;
+    color: transparent;
+}
+
+.landing-page .desain-bagus {
+    display: grid;
+    width: 40vw;
+}
+
+.landing-page .desain-bagus section img {
+    width: 170px;
+    height: 170px;
+    border-radius: 10px;
+}
+
+.landing-page .desain-bagus .atas {
+    place-self: end;
+    position: relative;
+}
+
+.landing-page .desain-bagus :is(.atas, .tengah, .bawah) {
+    overflow: hidden;
+}
+
+.landing-page .desain-bagus :is(.atas, .tengah, .bawah)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-image: linear-gradient(to right, transparent 0%, #fff6 100%);
+    transform: skewX(-35deg) translateX(-180%);
+}
+
+@keyframes shine {
+    0% {
+        transform: skewX(-35deg) translateX(-180%);
+    }
+    100% {
+        transform: skewX(-35deg) translateX(275%);
+    }
+}
+
+.landing-page .desain-bagus :is(.atas, .tengah, .bawah).shine-active::before {
+    animation: shine 3s 1;
+}
+
+.landing-page .desain-bagus .atribute-bunga-1 {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 205px;
+    top: 70px;
+    transform: rotate(-40deg);
+    z-index: 2;
+}
+
+
+.landing-page .desain-bagus .tengah {
+    place-self: center;
+    margin: 1rem 0 1rem 2rem;
+    position: relative;
+}
+
+.landing-page .desain-bagus .atribute-bunga-2 {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 355px;
+    top: 260px;
+    transform: rotate(-40deg);
+    z-index: 2;
+}
+
+.landing-page .desain-bagus .bawah {
+    place-self: end;
+    position: relative;
+}
+
+.landing-page .desain-bagus .atribute-bunga-3 {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 205px;
+    top: 450px;
+    transform: rotate(-40deg);
+    z-index: 2;
+}
+
+
+
+/* bagian filter dan product */
+
+main :is(.product, .paket-usaha) {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+main .product {
+    height: 100dvh;
+    background-image: linear-gradient(-160deg, #fdec00d6,  #FF91AF);
+    padding: 2.5rem 0;
+}
+
+main .product :is(.filter-inti, .filter-jenis) ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    column-gap: 7rem;
+    text-transform: uppercase;
+    margin-bottom: 3%;
+}
+
+.product .filter-inti ul li {
+    cursor: pointer;
+    font-size: 1.25rem;
+    
+}
+
+.product .filter-inti ul li.active {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.product .filter-inti ul li.active::before {
+    content: '';
+    position: absolute;
+    width: 70%;
+    height: 2px;
+    background-color: #fff;
+    top: 30px;
+    transition: .5s linear;
+}
+
+.product .filter-inti ul li:hover::before {
+    width: 0%;
+}
+
+.product .filter-jenis {
+    display: none;
+    position: relative;
+}
+
+@keyframes AnimateFilter {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.product .filter-jenis ul li {
+    cursor: pointer;
+    opacity: .2;
+    margin: 0 4.3rem;
+}
+
+.product .filter-jenis ul li:is([data-filter="rajut"], [data-filter="blouse"], [data-filter="kemeja"]) {
+    position: relative;
+}
+
+.product .filter-jenis ul li[data-filter="rajut"] {
+    right: 2rem;
+}
+
+.product .filter-jenis ul li[data-filter="blouse"] {
+    right: 1.3rem;
+}
+
+.product .filter-jenis ul li[data-filter="kemeja"] {
+    right: 1rem;
+}
+
+.product .filter-jenis ul li.active {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    transition: .4s ease-in-out;
+}
+
+.product .filter-jenis ul li.active::before {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 2px;
+    background-color: #fff;
+    top: 1.5rem;
+    transition: .6s ease;
+}
+
+.product .filter-jenis ul li.active::after {
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    background-color: #000;
+    top: 1.8rem;
+    transition: .7s linear;
+}
+
+.product .filter-jenis ul li.active:hover::before {
+    width: 0%;
+}
+
+.product .filter-jenis ul li.active:hover::after {
+    width: 0%;
+}
+
+
+
+/* product */
+
+.product .jenis-product {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    transition: .9s ease-out;
+    position: relative;
+}
+
+.product .jenis-product[data-letak] {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin: 0 1rem 0 -1rem;
+}
+
+.product .jenis-product .card-product {
+    background-image: linear-gradient(to top left, #ff91aeda 40%, #fdec00bb 29%);
+    width: 70%;
+    height: 38dvh;
+    margin: 0 3.5rem 8%;
+    border-radius: 10%;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    font-size: .8rem;
+}
+
+.product .jenis-product .card-product:nth-child(-n+5) {
+    display: none;
+    transition: .7s linear;
+}
+
+.product .jenis-product .card-product:nth-child(n+5) {
+    display: none;
+}
+
+.product .jenis-product .card-product img {
+    width: 50%;
+    height: 50%;
+    border-radius: 7%;
+    margin: 1rem 0;
+    object-fit: cover;
+    transition: .2s ease-in;
+}
+
+.product .jenis-product .card-product:hover img {
+    transform: scale(1.1);
+}
+
+
+/* preview product */
+
+.product .container-preview {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    height: 100dvh;
+    width: 100dvw;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.product .container-preview .card-preview {
+    display: none;
+    grid-template-areas: 'title img'
+                         'desc img';
+    border: 3px solid black;
+    background-image: linear-gradient(140deg, #FDEE00, #4997D0);
+    height: 50%;
+    width: 40%;
+}
+
+.product .container-preview .card-preview h3 {
+    grid-area: title;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: white;
+
+}
+
+.product .container-preview .card-preview img {
+    grid-area: img;
+    width: 200px;
+    height: 230px;
+    margin: auto 1rem;
+    border-top-right-radius: 20%;
+}
+
+.product .container-preview .card-preview .detail-bahan {
+    grid-area: desc;
+    width: 27ch;
+    margin-left: 1rem;
+}
+
+
+.product .container-preview .card-preview .close {
+    position: absolute;
+    font-size: 1.9rem;
+    top: 26.5%;
+    right: 30.5%;
+    height: 30px;
+    cursor: pointer;
+}
+
+
+/* bagian paket usaha */
+
+.paket-usaha {
+    height: 100dvh;
+    background-image: linear-gradient(160deg, #FF91AF , #fdec00d6);
+}
+
+.paket-usaha :is(.judul-paket, .penutup-paket) {
+    text-align: center;
+    color: white;
+    margin: 0 0 2rem;
+}
+
+.paket-usaha :is(.judul-paket, .penutup-paket) h2 {
+    text-transform: uppercase;
+}
+
+.paket-usaha :is(.judul-paket, .penutup-paket) p {
+    margin: 1rem 0 0;
+}
+
+.paket-usaha .penutup-paket {
+    margin: 3rem 0 0;
+}
+
+.paket-usaha .jenis-paket {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    color: white;
+}
+
+.paket-usaha .jenis-paket .paket {
+    border: 2px solid black;
+    margin: 1rem 2.2rem;
+    height: 15rem;
+    border-radius: 1rem;
+    position: relative;
+    background-color: #4998d0;
+    opacity: .8;
+    cursor: pointer;
+}
+
+.paket-usaha .jenis-paket .paket .judul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0rem 0 .6rem;
+}
+
+.paket-usaha .jenis-paket .paket .judul::after {
+    content: '';
+    position: absolute;
+    top: 3.5rem;
+    width: 12rem;
+    height: 2px;
+    background-color: black;
+}
+
+.paket-usaha .jenis-paket .paket .jns {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.paket-usaha .jenis-paket .paket .jns img {
+    width: 3rem;
+    height: 3rem; 
+}
+
+/* preview lengkap paket usaha */
+
+.paket-usaha .preview-lengkap-usaha {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 4;
+    width: 100dvw;
+    height: 100dvh;
+    color: #fff;
+    display: none;
+    transition: 2.5s ease-out;
+    transform: translateY(100%);
+}
+
+.paket-usaha .preview-lengkap-usaha :is(.kemeja-dan-blouse, .rajut-baru) {
+    display: grid;
+    grid-template-rows: 8rem 8rem 12rem;
+    grid-template-areas: 'title title title'
+                         'paket1 paket2 paket3'
+                         'close close close';
+    display: none;
+}
+
+.paket-usaha .preview-lengkap-usaha :is(.PU-rajut, .paketan-combo-best) {
+    display: grid;
+    grid-template-rows: 8rem 8rem 12rem;
+    grid-template-areas: 'title title'
+                         'paket1 paket2'
+                         'close close';
+    display: none;
+}
+
+.paket-usaha .preview-lengkap-usaha .preview-product .judul-preview {
+    grid-area: title;
+    margin-top: 4rem;
+    text-transform: uppercase;
+    place-self: start center;
+}
+
+.paket-usaha .preview-lengkap-usaha .preview-paket {
+    background-image: linear-gradient(45deg, #4997D0, #FF91AF 60%);
+    margin: 1rem;
+    width: 15rem;
+    height: 3.5rem;
+    place-self: start center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3%;
+    cursor: pointer;
+    transition: .55s ease-in-out;
+}
+
+.paket-usaha .preview-lengkap-usaha .preview-paket:hover {
+    box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.4);
+    color: black;
+}
+
+.paket-usaha .preview-lengkap-usaha :is(.kemeja-dan-blouse,.PU-rajut, .paketan-combo-best, .rajut-baru) .judul-preview img {
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    top: 8.5%;
+}
+
+
+.paket-usaha .preview-lengkap-usaha :is(.kemeja-dan-blouse, .rajut-baru) .judul-preview img {
+    left: 28%;
+}
+
+.paket-usaha .preview-lengkap-usaha :is(.kemeja-dan-blouse, .rajut-baru) .judul-preview img:last-child {
+    left: 67%;
+}
+
+.paket-usaha .preview-lengkap-usaha .PU-rajut .judul-preview img {
+    left: 34%;
+}
+
+.paket-usaha .preview-lengkap-usaha .PU-rajut .judul-preview img:last-child {
+    left: 61.2%;
+}
+
+.paket-usaha .preview-lengkap-usaha :is(.paketan-combo-best, .rajut-baru) .judul-preview img {
+    left: 32.5%;
+}
+
+.paket-usaha .preview-lengkap-usaha :is(.paketan-combo-best, .rajut-baru) .judul-preview img:last-child {
+    left: 62.7%;
+}
+
+.paket-usaha .preview-lengkap-usaha .arrow-down-close {
+    grid-area: close;
+    border: 2px solid black;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    place-self: end center;
+    cursor: pointer;
+}
+
+.paket-usaha .preview-lengkap-usaha .arrow-down-close .ph {
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+
+/* aside bar transaksi */
+
+:where(.transaksi, .link-tf, .ph-whatsapp-logo) {
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.transaksi {
+    position: fixed;
+    top: 87%;
+    left: 95%;
+    background-color: #25D366;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s linear;
+}
+
+.transaksi.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.transaksi a.link-tf {
+    text-decoration: none;
+    padding: 3.7px;
+    font-size: 2rem;
+    color: #ECE5DD;
+}
+
+
+/* tampilan mobile */
+ 
+@media (max-width: 480px) {
+    html {
+        overflow-x: hidden;
+    }
+
+    /* navbar */
+    header {
+        position: fixed;
+        bottom: 0;
+        top: auto;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        height: 120px;
+        z-index: 99;
+        display: grid;
+        grid-template-areas: 'nav1 logo nav2';
+    }
+
+    header figure {
+        grid-area: logo;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    header nav ul .link-1 {
+        grid-area: nav1;
+    }
+
+    header nav ul .link-2 {
+        grid-area: nav2;
+    }
+    header nav ul li a i {
+        visibility: visible;
+        font-size: 1.5rem;
+    }
+}
+
+
+
+
+
+
+
