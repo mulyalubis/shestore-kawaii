@@ -179,16 +179,18 @@ main .landing-page {
     animation: shine 3s 1;
 }
 
-.landing-page .desain-bagus .atribute-bunga-1 {
+.landing-page .desain-bagus :is(.atribute-bunga-1, .atribute-bunga-2, .atribute-bunga-3) {
     width: 50px;
     height: 50px;
     position: absolute;
-    right: 205px;
-    top: 70px;
     transform: rotate(-40deg);
     z-index: 2;
 }
 
+.landing-page .desain-bagus .atribute-bunga-1 {
+    right: 205px;
+    top: 70px;
+}
 
 .landing-page .desain-bagus .tengah {
     place-self: center;
@@ -197,13 +199,12 @@ main .landing-page {
 }
 
 .landing-page .desain-bagus .atribute-bunga-2 {
-    width: 50px;
-    height: 50px;
-    position: absolute;
     right: 355px;
     top: 260px;
-    transform: rotate(-40deg);
-    z-index: 2;
+}
+
+.landing-page .desain-bagus .atribute-bunga-2.hidden {
+    visibility: hidden;
 }
 
 .landing-page .desain-bagus .bawah {
@@ -212,13 +213,8 @@ main .landing-page {
 }
 
 .landing-page .desain-bagus .atribute-bunga-3 {
-    width: 50px;
-    height: 50px;
-    position: absolute;
     right: 205px;
     top: 450px;
-    transform: rotate(-40deg);
-    z-index: 2;
 }
 
 
@@ -346,6 +342,11 @@ main .product :is(.filter-inti, .filter-jenis) ul {
 .product .filter-jenis ul li.active:hover::after {
     width: 0%;
 }
+
+/* class clicker pada product dan paket-usaha */
+/* section.clicker {
+    
+} */
 
 
 
@@ -687,30 +688,213 @@ main .product :is(.filter-inti, .filter-jenis) ul {
         left: 0;
         right: 0;
         width: 100vw;
-        height: 120px;
+        height: 100px;
         z-index: 99;
-        display: grid;
-        grid-template-areas: 'nav1 logo nav2';
+        display: flex;
+        justify-content: center;
+        align-content: center;
     }
 
-    header figure {
-        grid-area: logo;
+    header .logo img {
+        width: 16rem;
+        height: 7rem;
+        object-fit: cover;
+    }
+    
+    header .logo figcaption {
+        display: none;
+    }
+
+    header nav ul {
+        left: 0;
+        bottom: 1rem;
+        width: 100%;
+    }
+    
+    header nav ul :is(.link-1, .link-2) {
+        position: absolute;
+        margin: 0 17.25%;
+        width: 22%;
+        padding: 0;
+        transition: .5s ease;
+        z-index: 20;
+    }
+
+    
+    header nav ul li a {
         display: flex;
         flex-direction: column;
-        
+        justify-content: center;
+        align-items: center;
+        color: white;
+        transition: .3s linear;
     }
+
+    header nav ul li a.active {
+        color: black;
+    }
+
 
     header nav ul .link-1 {
-        grid-area: nav1;
+        left: -12%;
+        top: 20px;
     }
-
+    
     header nav ul .link-2 {
-        grid-area: nav2;
+        left: 55%; 
+        top: 20px;
     }
     header nav ul li a i {
         visibility: visible;
-        font-size: 1.5rem;
+        font-size: 2.7rem;
     }
+    header nav ul li a p {
+        width: 10ch;
+        text-align: center;
+    }
+
+    /* about toko */
+    main .landing-page {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    .landing-page .about-toko {
+        width: 90vw;
+        margin-left: 2rem;
+        margin-bottom: 5rem;
+        padding-top: 0rem;
+        display: grid;
+        grid-template-areas: 'kata kata'
+                             'kata logo'
+                             'sosmed sosmed';
+    }
+    
+    .landing-page .about-toko p {
+        grid-area: kata;
+        font-size: 2rem;
+        line-height: 3.3rem;
+    }
+
+    .landing-page .about-toko h2 {
+        grid-area: logo;
+        font-size: 3rem;
+        text-align: end;
+        padding: 2rem 2rem 0 0;
+    }
+
+    .landing-page .about-toko .sosial-media {
+        grid-area: sosmed;
+        text-align: end;
+        padding: 7rem 0 0 0;
+    }
+
+    .landing-page .about-toko .sosial-media a {
+        margin: 0 1.8rem 0 4rem;
+    }
+
+    .landing-page .about-toko .sosial-media a i {
+        font-size: 2.8rem;
+    }
+
+    .landing-page .about-toko .sosial-media a .ph-instagram-logo {
+        background-image: linear-gradient(
+            45deg,
+            #feda75,
+            #fa7e1e,
+            #d62976,
+            #962fbf,
+            #4f5bd5
+        );
+        background-clip: text;
+        color: transparent;
+    }
+
+    .landing-page .about-toko .sosial-media a .ph-tiktok-logo {
+        background-image: linear-gradient(
+            135deg,
+            #000
+        );
+        background-clip: text;
+        color: transparent;
+    }
+
+    /* .landing-page .desain-bagus :is(.atribute-bunga-1, .atribute-bunga-2, .atribute-bunga-3) {
+        visibility: hidden;
+    } */
+
+    /* 3 tampilan baju */
+    .landing-page .desain-bagus {
+        display: flex;
+        width: 100dvw;
+        height: 40%;
+        margin-left: 1.5rem;
+    }
+    .landing-page .desain-bagus :is(.atribute-bunga-1, .atribute-bunga-2, .atribute-bunga-3) {
+        width: 35px;
+        height: 35px;
+        /* transform: rotate(0deg); */
+        z-index: 2;
+    }
+    .landing-page .desain-bagus .atribute-bunga-1 {
+        right: 64.5%;
+        top: 37%;
+        transform: rotate(40deg);
+    }
+    
+    .landing-page .desain-bagus .atribute-bunga-2 {
+        right: 61%;
+        top: 22%;
+    }
+
+    .landing-page .desain-bagus .atribute-bunga-2.hidden {
+        visibility: visible;
+        right: 31%;
+        transform: rotate(40deg);
+    }
+
+    .landing-page .desain-bagus .atribute-bunga-3 {
+        right: 27.5%;
+        top: 37%;
+    }
+
+    .landing-page .desain-bagus section img {
+        width: 140px;
+        height: 220px;
+        object-fit: cover;
+    }
+
+    .landing-page .desain-bagus :is(.atas, .tengah, .bawah)::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 70%;
+        background-image: linear-gradient(to right, transparent 0%, #fff6 100%);
+        transform: rotate(90deg) translate(-205%, -22%);
+    }
+
+    @keyframes shine {
+        0% {
+            transform: rotate(90deg) translate(-235%, -22%);
+        }
+        100% {
+            transform: rotate(90deg) translate(235%, -22%);
+        }
+    }
+
+    .landing-page .desain-bagus .tengah {
+        right: 12px;
+        bottom: 70px;
+    }
+
+    .landing-page .desain-bagus .bawah {
+        left: 5px;
+    }
+
 }
 
 

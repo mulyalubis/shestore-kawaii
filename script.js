@@ -1,7 +1,5 @@
 const atas = document.querySelector('.desain-bagus .atas')
-
 const tengah = document.querySelector('.desain-bagus .tengah')
-
 const bawah = document.querySelector('.desain-bagus .bawah')
 
 
@@ -202,5 +200,25 @@ document.addEventListener("DOMContentLoaded", () => {
     pembayaran()
 })
 
+
+// nav mobile (click)
+const clickNav = document.querySelectorAll('header nav ul li a')
+const containerTujuan = document.querySelectorAll('.clicker')
+
+
+clickNav.forEach((link) => {
+    link.addEventListener('click', () => {
+        clickNav.forEach((e) => {
+            e.classList.remove('active')
+        })
+        containerTujuan.forEach((lk) => {
+            const tujuan = link.getAttribute('data-link')
+            const tujuanLink = lk.getAttribute('data-tujuan')
+            if(tujuan === tujuanLink) {
+                link.classList.add('active')
+            }
+        })
+    })
+})
 
 
