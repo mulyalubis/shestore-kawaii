@@ -202,16 +202,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // nav mobile (click)
-const clickNav = document.querySelectorAll('header nav ul li a')
-const containerTujuan = document.querySelectorAll('.clicker')
+const home = document.querySelector('.landing-page')
+const linkHome = document.querySelector('header figure a')
+const linkInti = document.querySelectorAll('header nav ul li a')
+const inti = document.querySelectorAll('.clicker')
 
-
-clickNav.forEach((link) => {
+linkInti.forEach((link) => {
     link.addEventListener('click', () => {
-        clickNav.forEach((e) => {
+        linkInti.forEach((e) => {
             e.classList.remove('active')
+            funcHome()
         })
-        containerTujuan.forEach((lk) => {
+        inti.forEach((lk) => {
             const tujuan = link.getAttribute('data-link')
             const tujuanLink = lk.getAttribute('data-tujuan')
             if(tujuan === tujuanLink) {
@@ -222,3 +224,12 @@ clickNav.forEach((link) => {
 })
 
 
+const funcHome = () => {
+    linkHome.addEventListener('click', (e) => {
+        linkInti.forEach((lk) => {
+            if (linkHome.getAttribute('data-link') == home.getAttribute('data-tujuan')) {
+                lk.classList.remove('active')
+            }
+        })
+    })
+}

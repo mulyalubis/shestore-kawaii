@@ -676,6 +676,9 @@ main .product :is(.filter-inti, .filter-jenis) ul {
 /* tampilan mobile */
  
 @media (max-width: 480px) {
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
     html {
         overflow-x: hidden;
     }
@@ -695,10 +698,17 @@ main .product :is(.filter-inti, .filter-jenis) ul {
         align-content: center;
     }
 
+    /* header .logo a {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    } */
+
     header .logo img {
-        width: 16rem;
-        height: 7rem;
+        width: 12rem;
+        height: 5rem;
         object-fit: cover;
+        z-index: -8;
     }
     
     header .logo figcaption {
@@ -763,32 +773,20 @@ main .product :is(.filter-inti, .filter-jenis) ul {
     
     .landing-page .about-toko {
         width: 90vw;
-        margin-left: 2rem;
-        margin-bottom: 5rem;
+        margin: 0 0 5rem 2rem;
         padding-top: 0rem;
-        display: grid;
-        grid-template-areas: 'kata kata'
-                             'kata logo'
-                             'sosmed sosmed';
     }
     
     .landing-page .about-toko p {
-        grid-area: kata;
         font-size: 2rem;
-        line-height: 3.3rem;
     }
 
     .landing-page .about-toko h2 {
-        grid-area: logo;
         font-size: 3rem;
-        text-align: end;
-        padding: 2rem 2rem 0 0;
     }
 
     .landing-page .about-toko .sosial-media {
-        grid-area: sosmed;
-        text-align: end;
-        padding: 7rem 0 0 0;
+        text-align: start;
     }
 
     .landing-page .about-toko .sosial-media a {
@@ -821,9 +819,7 @@ main .product :is(.filter-inti, .filter-jenis) ul {
         color: transparent;
     }
 
-    /* .landing-page .desain-bagus :is(.atribute-bunga-1, .atribute-bunga-2, .atribute-bunga-3) {
-        visibility: hidden;
-    } */
+
 
     /* 3 tampilan baju */
     .landing-page .desain-bagus {
@@ -835,7 +831,6 @@ main .product :is(.filter-inti, .filter-jenis) ul {
     .landing-page .desain-bagus :is(.atribute-bunga-1, .atribute-bunga-2, .atribute-bunga-3) {
         width: 35px;
         height: 35px;
-        /* transform: rotate(0deg); */
         z-index: 2;
     }
     .landing-page .desain-bagus .atribute-bunga-1 {
