@@ -1,0 +1,177 @@
+[
+    {
+        "dataPakaian" : "baru",
+        "dataCategory" : "cardigan-rajut",
+        "nama" : "cardigan pink",
+        "img" : "img/product/baru/cardigan-rajut/cardigan-rajut-1.jpeg",
+        "harga" : "70Ribu"
+    },
+    {
+        "dataPakaian" : "baru",
+        "dataCategory" : "rajut",
+        "nama" : "Rajut pink",
+        "img" : "img/product/baru/rajut/rajut-1.jpeg",
+        "harga" : "75Ribu"
+    },
+    {
+        "dataPakaian" : "baru",
+        "dataCategory" : "blouse",
+        "nama" : "Blouse Biru",
+        "img" : "img/product/baru/blouse/blouse-1.jpeg",
+        "harga" : "80Ribu"
+    },
+    {
+        "dataPakaian" : "baru",
+        "dataCategory" : "kemeja",
+        "nama" : "Kemeja Kuning",
+        "img" : "img/product/baru/kemeja/kemeja-1.jpeg",
+        "harga" : "65Ribu"
+    },
+    {
+        "dataPakaian" : "thrifting",
+        "dataCategory" : "cardigan-rajut",
+        "nama" : "cardigan coklat",
+        "img" : "img/product/thrifting/cardigan-rajut/",
+        "harga" : "60Ribu"
+    },
+    {
+        "dataPakaian" : "thrifting",
+        "dataCategory" : "rajut",
+        "nama" : "rajut biru",
+        "img" : "img/product/thrifting/rajut/rajut-2.jpeg",
+        "harga" : "50Ribu"
+    },
+    {
+        "dataPakaian" : "thrifting",
+        "dataCategory" : "blouse",
+        "nama" : "blouse putih",
+        "img" : "img/product/thrifting/blouse/",
+        "harga" : "58Ribu"
+    },
+    {
+        "dataPakaian" : "thrifting",
+        "dataCategory" : "kemeja",
+        "nama" : "Kemeja pink",
+        "img" : "img/product/thrifting/kemeja/kemeja-1.jpeg",
+        "harga" : "55Ribu"
+    },
+    {
+        "dataPakaian" : "thrifting",
+        "dataCategory" : "kemeja",
+        "nama" : "Kemeja Kuning",
+        "img" : "img/product/baru/kemeja/kemeja-1.jpeg",
+        "harga" : "65Ribu"
+    },
+    {
+        "dataPakaian" : "thrifting",
+        "dataCategory" : "kemeja",
+        "nama" : "Kemeja Kuning",
+        "img" : "img/product/baru/kemeja/kemeja-1.jpeg",
+        "harga" : "65Ribu"
+    },
+    {
+        "dataPakaian" : "baru",
+        "dataCategory" : "kemeja",
+        "nama" : "Kemeja Kuning",
+        "img" : "img/product/baru/kemeja/kemeja-1.jpeg",
+        "harga" : "65Ribu"
+    },
+    {
+        "dataPakaian" : "baru",
+        "dataCategory" : "kemeja",
+        "nama" : "Kemeja Kuning",
+        "img" : "img/product/baru/kemeja/kemeja-1.jpeg",
+        "harga" : "65Ribu"
+    },
+    {
+        "dataPakaian" : "baru",
+        "dataCategory" : "kemeja",
+        "nama" : "Kemeja Kuning",
+        "img" : "img/product/baru/kemeja/kemeja-1.jpeg",
+        "harga" : "65Ribu"
+    },
+    {
+        "dataPakaian" : "baru",
+        "dataCategory" : "kemeja",
+        "nama" : "Kemeja Kuning",
+        "img" : "img/product/baru/kemeja/kemeja-1.jpeg",
+        "harga" : "65Ribu"
+    },
+    {
+        "dataPakaian" : "baru",
+        "dataCategory" : "kemeja",
+        "nama" : "Kemeja Kuning",
+        "img" : "img/product/baru/kemeja/kemeja-1.jpeg",
+        "harga" : "65Ribu"
+    },
+    {
+        "dataPakaian" : "baru",
+        "dataCategory" : "kemeja",
+        "nama" : "Kemeja Kuning",
+        "img" : "img/product/baru/kemeja/kemeja-1.jpeg",
+        "harga" : "65Ribu"
+    },
+    {
+        "dataPakaian" : "baru",
+        "dataCategory" : "kemeja",
+        "nama" : "Kemeja Kuning",
+        "img" : "img/product/baru/kemeja/kemeja-1.jpeg",
+        "harga" : "65Ribu"
+    },
+    {
+        "dataPakaian" : "baru",
+        "dataCategory" : "kemeja",
+        "nama" : "Kemeja Kuning",
+        "img" : "img/product/baru/kemeja/kemeja-1.jpeg",
+        "harga" : "65Ribu"
+    },
+    {
+        "dataPakaian" : "baru",
+        "dataCategory" : "kemeja",
+        "nama" : "Kemeja Kuning",
+        "img" : "img/product/baru/kemeja/kemeja-1.jpeg",
+        "harga" : "65Ribu"
+    },
+    {
+        "dataPakaian" : "baru",
+        "dataCategory" : "kemeja",
+        "nama" : "Kemeja Kuning",
+        "img" : "img/product/baru/kemeja/kemeja-1.jpeg",
+        "harga" : "65Ribu"
+    },
+    {
+        "dataPakaian" : "baru",
+        "dataCategory" : "kemeja",
+        "nama" : "Kemeja Kuning",
+        "img" : "img/product/baru/kemeja/kemeja-1.jpeg",
+        "harga" : "65Ribu"
+    },
+    {
+        "dataPakaian" : "baru",
+        "dataCategory" : "kemeja",
+        "nama" : "Kemeja Kuning",
+        "img" : "img/product/baru/kemeja/kemeja-1.jpeg",
+        "harga" : "65Ribu"
+    },
+    {
+        "dataPakaian" : "baru",
+        "dataCategory" : "kemeja",
+        "nama" : "Kemeja Kuning",
+        "img" : "img/product/baru/kemeja/kemeja-1.jpeg",
+        "harga" : "65Ribu"
+    },
+    {
+        "dataPakaian" : "baru",
+        "dataCategory" : "kemeja",
+        "nama" : "Kemeja Kuning",
+        "img" : "img/product/baru/kemeja/kemeja-1.jpeg",
+        "harga" : "65Ribu"
+    },
+    {
+        "dataPakaian" : "baru",
+        "dataCategory" : "kemeja",
+        "nama" : "Kemeja Kuning",
+        "img" : "img/product/baru/kemeja/kemeja-1.jpeg",
+        "harga" : "65Ribu"
+    }
+]

@@ -343,12 +343,6 @@ main .product :is(.filter-inti, .filter-jenis) ul {
     width: 0%;
 }
 
-/* class clicker pada product dan paket-usaha */
-/* section.clicker {
-    
-} */
-
-
 
 /* product */
 
@@ -691,22 +685,17 @@ main .product :is(.filter-inti, .filter-jenis) ul {
         left: 0;
         right: 0;
         width: 100vw;
-        height: 100px;
+        height: 70px;
         z-index: 99;
         display: flex;
         justify-content: center;
         align-content: center;
     }
 
-    /* header .logo a {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-    } */
-
     header .logo img {
-        width: 12rem;
-        height: 5rem;
+        margin-top: .5rem;
+        width: 10.5rem;
+        height: 4rem;
         object-fit: cover;
         z-index: -8;
     }
@@ -717,7 +706,9 @@ main .product :is(.filter-inti, .filter-jenis) ul {
 
     header nav ul {
         left: 0;
-        bottom: 1rem;
+        display: flex;
+        justify-content: spac;
+        /* bottom: 1rem; */
         width: 100%;
     }
     
@@ -756,7 +747,7 @@ main .product :is(.filter-inti, .filter-jenis) ul {
     }
     header nav ul li a i {
         visibility: visible;
-        font-size: 2.7rem;
+        font-size: 2.2rem;
     }
     header nav ul li a p {
         width: 10ch;
@@ -891,10 +882,3 @@ main .product :is(.filter-inti, .filter-jenis) ul {
     }
 
 }
-
-
-
-
-
-
-
