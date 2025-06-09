@@ -106,7 +106,7 @@ function filterEmpat(cardProduct, containerProduct, filterEmpatBagian) {
 
 
 // data product
-fetch('data-Json/product.json')
+fetch('data-json/product.json')
     .then(response => response.json())
     .then(result => {
         let product = ''
@@ -141,7 +141,7 @@ function elemenProduct(pdt, loopingName) {
 }
 
 // data preview
-fetch('data-Json/preview.json')
+fetch('data-json/preview.json')
     .then(response => response.json())
     .then(result => {
         let preview = ''
