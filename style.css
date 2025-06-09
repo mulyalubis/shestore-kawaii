@@ -148,11 +148,11 @@ main .landing-page {
 
 .landing-page .desain-bagus .atas {
     place-self: end;
-    position: relative;
 }
 
 .landing-page .desain-bagus :is(.atas, .tengah, .bawah) {
     overflow: hidden;
+    position: relative;
 }
 
 .landing-page .desain-bagus :is(.atas, .tengah, .bawah)::before {
@@ -195,7 +195,6 @@ main .landing-page {
 .landing-page .desain-bagus .tengah {
     place-self: center;
     margin: 1rem 0 1rem 2rem;
-    position: relative;
 }
 
 .landing-page .desain-bagus .atribute-bunga-2 {
@@ -203,13 +202,8 @@ main .landing-page {
     top: 260px;
 }
 
-.landing-page .desain-bagus .atribute-bunga-2.hidden {
-    visibility: hidden;
-}
-
 .landing-page .desain-bagus .bawah {
     place-self: end;
-    position: relative;
 }
 
 .landing-page .desain-bagus .atribute-bunga-3 {
@@ -240,9 +234,12 @@ main .product :is(.filter-inti, .filter-jenis) ul {
     justify-content: center;
     align-items: center;
     list-style-type: none;
-    column-gap: 7rem;
     text-transform: uppercase;
     margin-bottom: 3%;
+}
+
+main .product .filter-inti ul {
+    column-gap: 7rem;
 }
 
 .product .filter-inti ul li {
@@ -262,7 +259,7 @@ main .product :is(.filter-inti, .filter-jenis) ul {
     position: absolute;
     width: 70%;
     height: 2px;
-    background-color: #fff;
+    background-image: linear-gradient(to left, #4997D0, #FDEE00, #FF91AF);
     top: 30px;
     transition: .5s linear;
 }
@@ -289,29 +286,19 @@ main .product :is(.filter-inti, .filter-jenis) ul {
 .product .filter-jenis ul li {
     cursor: pointer;
     opacity: .2;
-    margin: 0 4.3rem;
+    margin: 0 10%;
+    text-align: center;
 }
 
-.product .filter-jenis ul li:is([data-filter="rajut"], [data-filter="blouse"], [data-filter="kemeja"]) {
-    position: relative;
-}
-
-.product .filter-jenis ul li[data-filter="rajut"] {
-    right: 2rem;
-}
-
-.product .filter-jenis ul li[data-filter="blouse"] {
-    right: 1.3rem;
-}
-
-.product .filter-jenis ul li[data-filter="kemeja"] {
-    right: 1rem;
+.product .filter-jenis ul li[data-filter="cardigan-rajut"].active::after {
+    top: 110%;
 }
 
 .product .filter-jenis ul li.active {
     position: relative;
     display: flex;
     justify-content: center;
+    align-items: center;
     transition: .4s ease-in-out;
 }
 
@@ -320,19 +307,19 @@ main .product :is(.filter-inti, .filter-jenis) ul {
     position: absolute;
     width: 60%;
     height: 2px;
-    background-color: #fff;
-    top: 1.5rem;
+    background-image: linear-gradient(to left, #4997D0, #FF91AF 80%);
+    top: 100%;
     transition: .6s ease;
 }
 
 .product .filter-jenis ul li.active::after {
     content: '';
     position: absolute;
-    width: 80%;
+    width: 60%;
     height: 2px;
-    background-color: #000;
-    top: 1.8rem;
-    transition: .7s linear;
+    background-image: linear-gradient(to left, #FF91AF 50%, #4997D0);
+    top: 120%;
+    transition: .6s linear;
 }
 
 .product .filter-jenis ul li.active:hover::before {
@@ -360,7 +347,7 @@ main .product :is(.filter-inti, .filter-jenis) ul {
 }
 
 .product .jenis-product .card-product {
-    background-image: linear-gradient(to top left, #ff91aeda 40%, #fdec00bb 29%);
+    background-image: linear-gradient(to top left, #ff91aeda, #fdec00bb);
     width: 70%;
     height: 38dvh;
     margin: 0 3.5rem 8%;
@@ -510,7 +497,7 @@ main .product :is(.filter-inti, .filter-jenis) ul {
     top: 3.5rem;
     width: 12rem;
     height: 2px;
-    background-color: black;
+    background-image: linear-gradient(to left, #FDEE00, #FF91AF);
 }
 
 .paket-usaha .jenis-paket .paket .jns {
@@ -524,6 +511,7 @@ main .product :is(.filter-inti, .filter-jenis) ul {
     height: 3rem; 
 }
 
+
 /* preview lengkap paket usaha */
 
 .paket-usaha .preview-lengkap-usaha {
@@ -536,26 +524,26 @@ main .product :is(.filter-inti, .filter-jenis) ul {
     height: 100dvh;
     color: #fff;
     display: none;
-    transition: 2.5s ease-out;
+    transition: 3.1s ease-in-out;
     transform: translateY(100%);
 }
 
-.paket-usaha .preview-lengkap-usaha :is(.kemeja-dan-blouse, .rajut-baru) {
+.paket-usaha .preview-lengkap-usaha .preview-product {
     display: grid;
     grid-template-rows: 8rem 8rem 12rem;
-    grid-template-areas: 'title title title'
-                         'paket1 paket2 paket3'
-                         'close close close';
     display: none;
 }
 
+.paket-usaha .preview-lengkap-usaha :is(.kemeja-dan-blouse, .rajut-baru) {
+    grid-template-areas: 'title title title'
+                         'paket1 paket2 paket3'
+                         'close close close';
+}
+
 .paket-usaha .preview-lengkap-usaha :is(.PU-rajut, .paketan-combo-best) {
-    display: grid;
-    grid-template-rows: 8rem 8rem 12rem;
     grid-template-areas: 'title title'
                          'paket1 paket2'
                          'close close';
-    display: none;
 }
 
 .paket-usaha .preview-lengkap-usaha .preview-product .judul-preview {
@@ -703,19 +691,13 @@ main .product :is(.filter-inti, .filter-jenis) ul {
     header .logo figcaption {
         display: none;
     }
-
-    header nav ul {
-        left: 0;
-        display: flex;
-        justify-content: spac;
-        /* bottom: 1rem; */
-        width: 100%;
-    }
     
     header nav ul :is(.link-1, .link-2) {
         position: absolute;
+        top: 0.5rem;
         margin: 0 17.25%;
         width: 22%;
+        height: max-content;
         padding: 0;
         transition: .5s ease;
         z-index: 20;
@@ -738,12 +720,10 @@ main .product :is(.filter-inti, .filter-jenis) ul {
 
     header nav ul .link-1 {
         left: -12%;
-        top: 20px;
     }
     
     header nav ul .link-2 {
         left: 55%; 
-        top: 20px;
     }
     header nav ul li a i {
         visibility: visible;
@@ -764,8 +744,8 @@ main .product :is(.filter-inti, .filter-jenis) ul {
     
     .landing-page .about-toko {
         width: 90vw;
-        margin: 0 0 5rem 2rem;
-        padding-top: 0rem;
+        padding: 0 .5rem 2rem;
+        margin-left: 1rem;
     }
     
     .landing-page .about-toko p {
@@ -778,10 +758,6 @@ main .product :is(.filter-inti, .filter-jenis) ul {
 
     .landing-page .about-toko .sosial-media {
         text-align: start;
-    }
-
-    .landing-page .about-toko .sosial-media a {
-        margin: 0 1.8rem 0 4rem;
     }
 
     .landing-page .about-toko .sosial-media a i {
@@ -814,41 +790,36 @@ main .product :is(.filter-inti, .filter-jenis) ul {
 
     /* 3 tampilan baju */
     .landing-page .desain-bagus {
-        display: flex;
         width: 100dvw;
-        height: 40%;
-        margin-left: 1.5rem;
+        height: 80%;
+        place-content: start center;
+        position: relative;
     }
     .landing-page .desain-bagus :is(.atribute-bunga-1, .atribute-bunga-2, .atribute-bunga-3) {
-        width: 35px;
-        height: 35px;
+        width: 40px;
+        height: 40px;
         z-index: 2;
     }
     .landing-page .desain-bagus .atribute-bunga-1 {
-        right: 64.5%;
-        top: 37%;
+        right: 49%;
+        top: -2.5%;
         transform: rotate(40deg);
     }
     
     .landing-page .desain-bagus .atribute-bunga-2 {
-        right: 61%;
-        top: 22%;
+        right: 41.5%;
+        top: 25%;
     }
-
-    .landing-page .desain-bagus .atribute-bunga-2.hidden {
-        visibility: visible;
-        right: 31%;
+    
+    .landing-page .desain-bagus .atribute-bunga-3 {
+        right: 49%;
+        top: 46%;
         transform: rotate(40deg);
     }
 
-    .landing-page .desain-bagus .atribute-bunga-3 {
-        right: 27.5%;
-        top: 37%;
-    }
-
     .landing-page .desain-bagus section img {
-        width: 140px;
-        height: 220px;
+        width: 160px;
+        height: 230px;
         object-fit: cover;
     }
 
@@ -872,13 +843,261 @@ main .product :is(.filter-inti, .filter-jenis) ul {
         }
     }
 
+    .landing-page .desain-bagus :is(.atas, .bawah) {
+        right: 7rem;
+    }
     .landing-page .desain-bagus .tengah {
-        right: 12px;
-        bottom: 70px;
+        left: 5rem;
+        bottom: 3rem;
     }
-
+    
     .landing-page .desain-bagus .bawah {
-        left: 5px;
+        bottom: 9rem;
     }
 
+    /* filter jenis */
+    main .product .filter-jenis {
+        margin: 0 1rem;
+        height: 30%;
+        overflow: hidden;
+    }
+    main .product .filter-jenis ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        place-items: center;
+    }
+    main .product .filter-jenis ul li {
+        width: max-content;
+        margin: 1.2rem 0;
+    }
+    main .product .filter-jenis ul li:is([data-filter="cardigan-rajut"], [data-filter="blouse"]) {
+        margin-right: 1rem;
+    }
+    main .product .filter-jenis ul li:is([data-filter="kemeja"], [data-filter="rajut"]) {
+        margin-left: 1rem;
+    }
+    .product .filter-jenis ul li.active {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .product .filter-jenis ul li.active::before {
+        content: '';
+        position: absolute;
+        width: 50%;
+        height: 2px;
+        background-color: #4997D0;
+        top: 120%;
+    }
+
+    .product .filter-jenis ul li.active::after {
+        width: 0%;
+        height: 0px;
+    }
+
+
+    /* product */
+    .product .jenis-product {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        transition: .4s ease-out;
+        position: relative;
+    }
+    .product .jenis-product .card-product {
+        background-image: linear-gradient(to top left, #ff91aeda, #fdec00bb);
+        width: 75%;
+        height: 20dvh;
+        margin: 0 auto 10%;
+        border-radius: 7%;
+        text-align: center;
+        font-size: .75rem;
+    }
+    .product .jenis-product .card-product img {
+        width: 70%;
+        height: 60%;
+        border-radius: 7%;
+        margin: 1rem 0 .5rem;
+        object-fit: cover;
+    }
+    .product .jenis-product[data-letak] {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 0 1rem;
+        min-width: max-content;
+    }
+    .product .jenis-product[data-letak] .card-product h2 {
+        min-width: max-content;
+        font-size: .8rem;
+    }
+    
+
+    /* preview product */
+    .product .container-preview .card-preview {
+        display: none;
+        grid-template-areas: 'title img'
+                            'desc img';
+        border: 3px solid black;
+        background-image: linear-gradient(140deg, #FDEE00, #4997D0);
+        width: 75%;
+        height: 35%;
+    }
+    .product .container-preview .card-preview h3 {
+        align-items: flex-start;
+        margin: 1rem 1rem -2rem;
+        font-size: 1.2rem;
+        height: 50%;
+    }
+
+    .product .container-preview .card-preview img {
+        width: 150px;
+        height: 190px;
+        margin: auto 1rem;
+        border-top-right-radius: 20%;
+    }
+    .product .container-preview .card-preview .detail-bahan {
+        width: 17ch;
+        margin-left: 1.2rem;
+        font-size: .8rem;
+    }
+    .product .container-preview .card-preview .close {
+        font-size: 2.3rem;
+        top: 33%;
+        right: 14%;
+        height: 40px;
+    }
+
+
+
+    /* paket usaha */
+    .paket-usaha {
+        padding-top: 2%;
+    }
+    .paket-usaha :is(.judul-paket, .penutup-paket) {
+        margin: 1rem 1rem 2rem;
+    }
+    .paket-usaha :is(.judul-paket, .penutup-paket) h2 {
+        font-size: 1.8rem;
+    }
+    .paket-usaha :is(.judul-paket, .penutup-paket) p {
+        margin: 1rem auto;
+        font-size: 1.1rem;
+        width: 30ch;
+    }
+    .paket-usaha .jenis-paket {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .paket-usaha .jenis-paket .paket {
+        margin: 1rem 1rem;
+        height: 15rem;
+        border-radius: .7rem;
+    }
+    .paket-usaha .jenis-paket .paket .judul {
+        margin: 0rem 0 1.2rem;
+        font-size: .8rem;
+    }
+    .paket-usaha .jenis-paket .paket .judul::after {
+        top: 3.3rem;
+        height: 4px;
+        width: 11rem;
+    }
+    .paket-usaha .jenis-paket .paket .jns {
+        font-size: .85rem;
+    }
+    .paket-usaha .jenis-paket .paket .jns img {
+        width: 2rem;
+        height: 2rem; 
+    }
+
+    /* preview paket */
+    .paket-usaha .preview-lengkap-usaha .preview-product {
+        grid-template-areas: 'judul judul'
+                             'harga1 harga2'
+                             'harga3 harga3'
+                             'close close';
+        grid-template-rows: repeat(4, 40%);
+    }
+    .paket-usaha .preview-lengkap-usaha .preview-product .judul-preview {
+        grid-area: judul;
+        margin: 2.2rem 0;
+        font-size: .9rem;   
+    }
+    .paket-usaha .preview-lengkap-usaha .preview-product .judul-preview h2 {
+        width: 18ch;
+        text-align: center;
+    }
+    .paket-usaha .preview-lengkap-usaha :is(.kemeja-dan-blouse,.PU-rajut, .paketan-combo-best, .rajut-baru) .judul-preview img {
+        height: 40px;
+        width: 40px;
+        top: 6%;
+    }
+    .paket-usaha .preview-lengkap-usaha :is(.PU-rajut, .rajut-baru) .judul-preview h2 {
+        width: 15ch;
+    }
+    .paket-usaha .preview-lengkap-usaha .preview-paket {
+        background-image: linear-gradient(45deg, #4997D0, #FF91AF 60%);
+        margin: 1rem;
+        width: 10%;
+        height: max-content;
+        text-align: center;
+        padding: .35rem;
+        width: 20ch;
+    }
+    .paket-usaha .preview-lengkap-usaha .kemeja-dan-blouse .judul-preview img {
+        left: 17%;
+    }
+
+    .paket-usaha .preview-lengkap-usaha .kemeja-dan-blouse .judul-preview img:last-child {
+        left: 74%;
+    }
+    .paket-usaha .preview-lengkap-usaha .PU-rajut .judul-preview img {
+        left: 30%;
+    }
+    .paket-usaha .preview-lengkap-usaha .PU-rajut .judul-preview img:last-child {
+        left: 61.5%;
+    }
+    .paket-usaha .preview-lengkap-usaha .paketan-combo-best .judul-preview img {
+        left: 27%;
+    }
+    .paket-usaha .preview-lengkap-usaha .paketan-combo-best .judul-preview img:last-child {
+        left: 64%;
+    }
+    .paket-usaha .preview-lengkap-usaha .paketan-combo-best .judul-preview img {
+        left: 27%;
+    }
+    .paket-usaha .preview-lengkap-usaha .paketan-combo-best .judul-preview img:last-child {
+        left: 64%;
+    }
+    .paket-usaha .preview-lengkap-usaha .rajut-baru .judul-preview img {
+        left: 27.5%;
+    }
+    .paket-usaha .preview-lengkap-usaha .rajut-baru .judul-preview img:last-child {
+        left: 63.6%;
+    }
+    .paket-usaha .preview-lengkap-usaha .preview-paket p {
+        padding: 0;
+        font-size: .8rem;
+    }
+    .paket-usaha .preview-lengkap-usaha .preview-product .harga-1 {
+        grid-area: harga1;
+        width: 55%;
+    }
+    .paket-usaha .preview-lengkap-usaha .preview-product .harga-2 {
+        grid-area: harga2;
+        width: 60%;
+    }
+    .paket-usaha .preview-lengkap-usaha .preview-product .harga-3 {
+        grid-area: harga3;
+    }
+    .paket-usaha .preview-lengkap-usaha .arrow-down-close {
+        border: 2px solid white;
+    }
+
+    /* transaksi via whatsApp */
+    .transaksi {
+        top: 82%;
+        left: 90%;
+    }
 }

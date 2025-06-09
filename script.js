@@ -228,7 +228,7 @@ paket.forEach((pkt) => {
                 prodprev.style.display = 'grid'
                 setTimeout(() => {
                     containerPrevPaket.style.transform = 'translateY(0)'
-                }, 300)
+                }, 100)
             }
         })
     })
@@ -242,7 +242,7 @@ arrowClose.forEach(function(close) {
             setTimeout(() => {
                 containerPrevPaket.style.display = 'none'
                 paket.style.display = 'none'
-            }, 2700)
+            }, 3300)
         })
     })
 })
