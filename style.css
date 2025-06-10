@@ -859,6 +859,9 @@ main .product .filter-inti ul {
         position: relative;
         z-index: 999;
     }
+    main .product .filter-inti ul {
+        flex-direction: column;
+    }
     .product .filter-inti ul li {
         user-select: none;
         touch-action: manipulation;
