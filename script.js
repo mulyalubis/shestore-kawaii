@@ -175,6 +175,8 @@ fetch('data-json/product.json')
         const tinggiProduct = document.querySelector('.product')
         const filterEmpatBagian = document.querySelectorAll('.filter-jenis ul li')
 
+        console.log("Jumlah filter inti:", filterInti.length);
+
         filterUtama(cardProduct, filterInti, filterBagian, tinggiProduct)
 
         filterEmpat(cardProduct, containerProduct, filterEmpatBagian)
@@ -349,3 +351,21 @@ const funcHome = () => {
         })
     })
 }
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const testTap = document.getElementById('testTap');
+
+  if (testTap) {
+    testTap.addEventListener('touchend', () => {
+      alert("touchend bekerja!");
+    });
+
+    testTap.addEventListener('click', () => {
+      console.log("click juga bekerja!");
+    });
+  }
+});
+
+
