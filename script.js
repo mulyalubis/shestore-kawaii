@@ -28,108 +28,108 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 // function interaktif product
-// function filterUtama(cardProduct, filterInti, filterBagian, tinggiProduct) {
-//     return filterInti.forEach( (filt) => {
-//         filt.addEventListener('click', () => {
-//             filterInti.forEach( (i) => {
-//                 i.classList.remove('active')
-//             })
-//             filt.classList.add('active')
-//             tinggiProduct.style.height = '100%'
-//             filterBagian.style.display = 'block'
-//             filterBagian.style.animation = 'AnimateFilter 1s ease-out 1'
-//             const displayFilter = filt.getAttribute('data-pakaian')
-            
-//             const filterBagianActive = document.querySelector('.filter-jenis ul li.active')
-            
-//             let count = 0
-
-//             cardProduct.forEach((card) => {
-//                 const pakaian = card.getAttribute('data-pakaian')
-//                 const kategori = card.getAttribute('data-category')
-
-//                 let isVisible = false
-
-//                 if (filterBagianActive) {
-//                     const displayFilterBagian = filterBagianActive.getAttribute('data-filter')
-//                     if (pakaian === displayFilter && kategori === displayFilterBagian) {
-//                         isVisible = true
-//                         count++
-//                     }
-//                 } else {
-//                     if (pakaian === displayFilter && count < 4) {
-//                         isVisible = true
-//                         count++
-//                     }
-//                 }
-
-//                 if (isVisible) {
-//                     card.classList.add('active')
-//                     card.style.display = 'block'
-//                     card.style.animation = 'AnimateFilter .8s linear 1'
-//                 } else {
-//                     card.classList.remove('active')
-//                     card.style.display = 'none'
-//                 }
-//             })
-//         })
-//     })
-// }
-
 function filterUtama(cardProduct, filterInti, filterBagian, tinggiProduct) {
-    return filterInti.forEach((filt) => {
-        ['click', 'touchstart'].forEach((evt) => {
-            filt.addEventListener(evt, (e) => {
-                e.preventDefault();
-                e.stopPropagation();
+    return filterInti.forEach( (filt) => {
+        filt.addEventListener('touchend', () => {
+            filterInti.forEach( (i) => {
+                i.classList.remove('active')
+            })
+            filt.classList.add('active')
+            tinggiProduct.style.height = '100%'
+            filterBagian.style.display = 'block'
+            filterBagian.style.animation = 'AnimateFilter 1s ease-out 1'
+            const displayFilter = filt.getAttribute('data-pakaian')
+            
+            const filterBagianActive = document.querySelector('.filter-jenis ul li.active')
+            
+            let count = 0
 
-                // Ganti active class
-                filterInti.forEach((i) => {
-                    i.classList.remove('active');
-                });
-                filt.classList.add('active');
+            cardProduct.forEach((card) => {
+                const pakaian = card.getAttribute('data-pakaian')
+                const kategori = card.getAttribute('data-category')
 
-                // Tampilkan filter jenis
-                tinggiProduct.style.height = '100%';
-                filterBagian.style.display = 'block';
-                filterBagian.style.animation = 'AnimateFilter 1s ease-out 1';
+                let isVisible = false
 
-                const displayFilter = filt.getAttribute('data-pakaian');
-                const filterBagianActive = document.querySelector('.filter-jenis ul li.active');
-
-                let count = 0;
-
-                cardProduct.forEach((card) => {
-                    const pakaian = card.getAttribute('data-pakaian');
-                    const kategori = card.getAttribute('data-category');
-                    let isVisible = false;
-
-                    if (filterBagianActive) {
-                        const displayFilterBagian = filterBagianActive.getAttribute('data-filter');
-                        if (pakaian === displayFilter && kategori === displayFilterBagian) {
-                            isVisible = true;
-                            count++;
-                        }
-                    } else {
-                        if (pakaian === displayFilter && count < 4) {
-                            isVisible = true;
-                            count++;
-                        }
+                if (filterBagianActive) {
+                    const displayFilterBagian = filterBagianActive.getAttribute('data-filter')
+                    if (pakaian === displayFilter && kategori === displayFilterBagian) {
+                        isVisible = true
+                        count++
                     }
-
-                    if (isVisible) {
-                        card.classList.add('active');
-                        card.style.display = 'block';
-                        card.style.animation = 'AnimateFilter .8s linear 1';
-                    } else {
-                        card.classList.remove('active');
-                        card.style.display = 'none';
+                } else {
+                    if (pakaian === displayFilter && count < 4) {
+                        isVisible = true
+                        count++
                     }
-                });
-            }, { passive: false }); // Agar bisa pakai preventDefault di Safari
-        });
-    });
+                }
+
+                if (isVisible) {
+                    card.classList.add('active')
+                    card.style.display = 'block'
+                    card.style.animation = 'AnimateFilter .8s linear 1'
+                } else {
+                    card.classList.remove('active')
+                    card.style.display = 'none'
+                }
+            })
+        })
+    })
 }
+
+// function filterUtama(cardProduct, filterInti, filterBagian, tinggiProduct) {
+//     return filterInti.forEach((filt) => {
+//         ['click', 'touchend'].forEach((evt) => {
+//             filt.addEventListener(evt, (e) => {
+//                 e.preventDefault();
+//                 e.stopPropagation();
+
+//                 // Ganti active class
+//                 filterInti.forEach((i) => {
+//                     i.classList.remove('active');
+//                 });
+//                 filt.classList.add('active');
+
+//                 // Tampilkan filter jenis
+//                 tinggiProduct.style.height = '100%';
+//                 filterBagian.style.display = 'block';
+//                 filterBagian.style.animation = 'AnimateFilter 1s ease-out 1';
+
+//                 const displayFilter = filt.getAttribute('data-pakaian');
+//                 const filterBagianActive = document.querySelector('.filter-jenis ul li.active');
+
+//                 let count = 0;
+
+//                 cardProduct.forEach((card) => {
+//                     const pakaian = card.getAttribute('data-pakaian');
+//                     const kategori = card.getAttribute('data-category');
+//                     let isVisible = false;
+
+//                     if (filterBagianActive) {
+//                         const displayFilterBagian = filterBagianActive.getAttribute('data-filter');
+//                         if (pakaian === displayFilter && kategori === displayFilterBagian) {
+//                             isVisible = true;
+//                             count++;
+//                         }
+//                     } else {
+//                         if (pakaian === displayFilter && count < 4) {
+//                             isVisible = true;
+//                             count++;
+//                         }
+//                     }
+
+//                     if (isVisible) {
+//                         card.classList.add('active');
+//                         card.style.display = 'block';
+//                         card.style.animation = 'AnimateFilter .8s linear 1';
+//                     } else {
+//                         card.classList.remove('active');
+//                         card.style.display = 'none';
+//                     }
+//                 });
+//             }, { passive: false }); // Agar bisa pakai preventDefault di Safari
+//         });
+//     });
+// }
 
 
 function filterEmpat(cardProduct, containerProduct, filterEmpatBagian) {

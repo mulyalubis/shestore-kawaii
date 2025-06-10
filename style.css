@@ -857,7 +857,12 @@ main .product .filter-inti ul {
     /* filter inti */
     .product .filter-inti {
         position: relative;
-        z-index: 5;
+        z-index: 999;
+    }
+    .product .filter-inti ul li {
+        user-select: none;
+        touch-action: manipulation;
+        padding: 1rem;
     }
 
     /* filter jenis */
