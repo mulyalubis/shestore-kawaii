@@ -386,7 +386,7 @@ main .product .filter-inti ul {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 3;
+    z-index: 2;
     height: 100dvh;
     width: 100dvw;
     display: none;
@@ -856,8 +856,7 @@ main .product .filter-inti ul {
 
     /* filter inti */
     .product .filter-inti {
-        position: relative;
-        z-index: 2;
+        z-index: 1;
     }
 
     /* filter jenis */
