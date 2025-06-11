@@ -27,102 +27,102 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 // function interaktif product
-// function filterUtama(cardProduct, filterInti, filterBagian, tinggiProduct) {
-//     return filterInti.forEach( (filt) => {
-//         filt.addEventListener('click', () => {
-//             filterInti.forEach( (i) => {
-//                 i.classList.remove('active')
-//             })
-//             filt.classList.add('active')
-//             tinggiProduct.style.height = '100%'
-//             filterBagian.style.display = 'block'
-//             filterBagian.style.animation = 'AnimateFilter 1s ease-out 1'
-//             const displayFilter = filt.getAttribute('data-pakaian')
-            
-//             const filterBagianActive = document.querySelector('.filter-jenis ul li.active')
-            
-//             let count = 0
-
-//             cardProduct.forEach((card) => {
-//                 const pakaian = card.getAttribute('data-pakaian')
-//                 const kategori = card.getAttribute('data-category')
-
-//                 let isVisible = false
-
-//                 if (filterBagianActive) {
-//                     const displayFilterBagian = filterBagianActive.getAttribute('data-filter')
-//                     if (pakaian === displayFilter && kategori === displayFilterBagian) {
-//                         isVisible = true
-//                         count++
-//                     }
-//                 } else {
-//                     if (pakaian === displayFilter && count < 4) {
-//                         isVisible = true
-//                         count++
-//                     }
-//                 }
-
-//                 if (isVisible) {
-//                     card.classList.add('active')
-//                     card.style.display = 'block'
-//                     card.style.animation = 'AnimateFilter .8s linear 1'
-//                 } else {
-//                     card.classList.remove('active')
-//                     card.style.display = 'none'
-//                 }
-//             })
-//         })
-//     })
-// }
-
 function filterUtama(cardProduct, filterInti, filterBagian, tinggiProduct) {
-    const evtName = 'ontouchstart' in window ? 'touchend' : 'click'
-
-    return filterInti.forEach((filt) => {
-        filt.addEventListener(evtName, (e) => {
-            e.preventDefault();
-
-            filterInti.forEach((i) => i.classList.remove('active'));
-            filt.classList.add('active');
-
-            tinggiProduct.style.height = '100%';
-            filterBagian.style.display = 'block';
-            filterBagian.style.animation = 'AnimateFilter 1s ease-out 1';
-
-            const displayFilter = filt.getAttribute('data-pakaian');
-            const filterBagianActive = document.querySelector('.filter-jenis ul li.active');
-            let count = 0;
+    return filterInti.forEach( (filt) => {
+        filt.addEventListener('click', () => {
+            filterInti.forEach( (i) => {
+                i.classList.remove('active')
+            })
+            filt.classList.add('active')
+            tinggiProduct.style.height = '100%'
+            filterBagian.style.display = 'block'
+            filterBagian.style.animation = 'AnimateFilter 1s ease-out 1'
+            const displayFilter = filt.getAttribute('data-pakaian')
+            
+            const filterBagianActive = document.querySelector('.filter-jenis ul li.active')
+            
+            let count = 0
 
             cardProduct.forEach((card) => {
-                const pakaian = card.getAttribute('data-pakaian');
-                const kategori = card.getAttribute('data-category');
-                let isVisible = false;
+                const pakaian = card.getAttribute('data-pakaian')
+                const kategori = card.getAttribute('data-category')
+
+                let isVisible = false
 
                 if (filterBagianActive) {
-                    const displayFilterBagian = filterBagianActive.getAttribute('data-filter');
+                    const displayFilterBagian = filterBagianActive.getAttribute('data-filter')
                     if (pakaian === displayFilter && kategori === displayFilterBagian) {
-                        isVisible = true;
-                        count++;
+                        isVisible = true
+                        count++
                     }
                 } else {
                     if (pakaian === displayFilter && count < 4) {
-                        isVisible = true;
-                        count++;
+                        isVisible = true
+                        count++
                     }
                 }
 
                 if (isVisible) {
-                    card.classList.add('active');
-                    card.style.display = 'block';
-                    card.style.animation = 'AnimateFilter .8s linear 1';
+                    card.classList.add('active')
+                    card.style.display = 'block'
+                    card.style.animation = 'AnimateFilter .8s linear 1'
                 } else {
-                    card.classList.remove('active');
-                    card.style.display = 'none';
+                    card.classList.remove('active')
+                    card.style.display = 'none'
                 }
-            });
-        }, { passive: false });
-    });
+            })
+        })
+    })
 }
+
+// function filterUtama(cardProduct, filterInti, filterBagian, tinggiProduct) {
+//     const evtName = 'ontouchstart' in window ? 'touchend' : 'click'
+
+//     return filterInti.forEach((filt) => {
+//         filt.addEventListener(evtName, (e) => {
+//             e.preventDefault();
+
+//             filterInti.forEach((i) => i.classList.remove('active'));
+//             filt.classList.add('active');
+
+//             tinggiProduct.style.height = '100%';
+//             filterBagian.style.display = 'block';
+//             filterBagian.style.animation = 'AnimateFilter 1s ease-out 1';
+
+//             const displayFilter = filt.getAttribute('data-pakaian');
+//             const filterBagianActive = document.querySelector('.filter-jenis ul li.active');
+//             let count = 0;
+
+//             cardProduct.forEach((card) => {
+//                 const pakaian = card.getAttribute('data-pakaian');
+//                 const kategori = card.getAttribute('data-category');
+//                 let isVisible = false;
+
+//                 if (filterBagianActive) {
+//                     const displayFilterBagian = filterBagianActive.getAttribute('data-filter');
+//                     if (pakaian === displayFilter && kategori === displayFilterBagian) {
+//                         isVisible = true;
+//                         count++;
+//                     }
+//                 } else {
+//                     if (pakaian === displayFilter && count < 4) {
+//                         isVisible = true;
+//                         count++;
+//                     }
+//                 }
+
+//                 if (isVisible) {
+//                     card.classList.add('active');
+//                     card.style.display = 'block';
+//                     card.style.animation = 'AnimateFilter .8s linear 1';
+//                 } else {
+//                     card.classList.remove('active');
+//                     card.style.display = 'none';
+//                 }
+//             });
+//         }, { passive: false });
+//     });
+// }
 
 
 function filterEmpat(cardProduct, containerProduct, filterEmpatBagian) {
