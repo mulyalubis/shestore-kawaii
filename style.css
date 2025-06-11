@@ -858,7 +858,7 @@ main .product .filter-inti ul {
     .product .filter-inti ul li {
         user-select: none;
         touch-action: manipulation;
-        /* padding: 1rem; */
+        padding: 1rem;
     }
 
     /* filter jenis */
