@@ -855,14 +855,11 @@ main .product .filter-inti ul {
     }
 
     /* filter inti */
-    main .product .filter-inti ul {
-        flex-direction: column;
-    }
-    /* .product .filter-inti ul li {
+    .product .filter-inti ul li {
         user-select: none;
         touch-action: manipulation;
-        padding: 1rem;
-    } */
+        /* padding: 1rem; */
+    }
 
     /* filter jenis */
     main .product .filter-jenis {
