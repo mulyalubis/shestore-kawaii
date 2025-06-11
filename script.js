@@ -354,18 +354,18 @@ const funcHome = () => {
 
 
 
-document.addEventListener('DOMContentLoaded', function () {
-  const testTap = document.querySelector('.barusss');
+// document.addEventListener('DOMContentLoaded', function () {
+//   const testTap = document.querySelector('.barusss');
 
-  if (testTap) {
-    testTap.addEventListener('touchend', () => {
-      alert("touchend bekerja!");
-    });
+//   if (testTap) {
+//     testTap.addEventListener('touchend', () => {
+//       alert("touchend bekerja!");
+//     });
 
-    testTap.addEventListener('click', () => {
-      console.log("click juga bekerja!");
-    });
-  }
-});
+//     testTap.addEventListener('click', () => {
+//       console.log("click juga bekerja!");
+//     });
+//   }
+// });
 
 
