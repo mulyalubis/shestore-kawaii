@@ -856,6 +856,7 @@ main .product .filter-inti ul {
 
     /* filter inti */
     .product .filter-inti {
+        position: relative;
         z-index: 9;
     }
 
