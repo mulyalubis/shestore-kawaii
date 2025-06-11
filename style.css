@@ -856,7 +856,7 @@ main .product .filter-inti ul {
 
     /* filter inti */
     .product .filter-inti {
-        z-index: 5;
+        z-index: 9;
     }
 
     /* filter jenis */

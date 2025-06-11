@@ -202,7 +202,7 @@ function btnClose(allPreview, cardPreview, closes, ctnFilter) {
     closes.forEach((cb) => {
     cb.addEventListener('click', () => {
         allPreview.style.display = 'none'
-        ctnFilter.style.zIndex = '5'
+        ctnFilter.style.zIndex = '9'
         cardPreview.forEach((card) => {
             card.style.display = 'none'
         })
