@@ -933,6 +933,9 @@ main .product .filter-inti ul {
     
 
     /* preview product */
+    .product .container-preview:not([style*="display: flex"]) {
+        pointer-events: none !important;
+    }
     .product .container-preview .card-preview {
         display: none;
         grid-template-areas: 'title img'
