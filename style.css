@@ -854,6 +854,16 @@ main .product .filter-inti ul {
         bottom: 9rem;
     }
 
+    /* filter inti */
+    main .product .filter-inti ul {
+        flex-direction: column;
+    }
+    /* .product .filter-inti ul li {
+        user-select: none;
+        touch-action: manipulation;
+        padding: 1rem;
+    } */
+
     /* filter jenis */
     main .product .filter-jenis {
         margin: 0 1rem;
@@ -933,9 +943,6 @@ main .product .filter-inti ul {
     
 
     /* preview product */
-    .product .container-preview:not([style*="display: flex"]) {
-        pointer-events: none !important;
-    }
     .product .container-preview .card-preview {
         display: none;
         grid-template-areas: 'title img'
