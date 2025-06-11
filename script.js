@@ -175,7 +175,7 @@ fetch('data-json/product.json')
         const tinggiProduct = document.querySelector('.product')
         const filterEmpatBagian = document.querySelectorAll('.filter-jenis ul li')
 
-        console.log("Jumlah filter inti:", filterInti.length);
+        // console.log("Jumlah filter inti:", filterInti.length)
 
         filterUtama(cardProduct, filterInti, filterBagian, tinggiProduct)
 
