@@ -177,9 +177,12 @@ fetch('data-json/product.json')
 
         // console.log("Jumlah filter inti:", filterInti.length)
 
-        filterUtama(cardProduct, filterInti, filterBagian, tinggiProduct)
+        document.addEventListener('DOMContentLoaded', () => {
+            filterUtama(cardProduct, filterInti, filterBagian, tinggiProduct);
+            filterEmpat(cardProduct, containerProduct, filterEmpatBagian)
+        });
+        // filterUtama(cardProduct, filterInti, filterBagian, tinggiProduct)
 
-        filterEmpat(cardProduct, containerProduct, filterEmpatBagian)
     })
 
 function elemenProduct(pdt, loopingName) {
