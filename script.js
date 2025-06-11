@@ -355,7 +355,7 @@ const funcHome = () => {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-  const testTap = document.getElementById('testTap');
+  const testTap = document.querySelector('.barusss');
 
   if (testTap) {
     testTap.addEventListener('touchend', () => {
