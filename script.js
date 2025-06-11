@@ -156,15 +156,15 @@ fetch('datajson/preview.json')
 
         const cardPreview = document.querySelectorAll('.container-preview .card-preview')
         const cardProduct = document.querySelectorAll('.jenis-product .card-product')
-        const filterInti = document.querySelectorAll(".filter-inti ul li")
+        const ctnFilter = document.querySelector(".filter-inti")
 
-        cardsPreview(allPreview, cardPreview, cardProduct, filterInti )
+        cardsPreview(allPreview, cardPreview, cardProduct, ctnFilter)
 
 
         // button close 
         const closes = document.querySelectorAll('.close i')
         
-        btnClose(allPreview, cardPreview, closes, filterInti)
+        btnClose(allPreview, cardPreview, closes, ctnFilter)
 
     })
 
@@ -183,13 +183,11 @@ function productPreview(prv, loopingPreview) {
 
 
 
-function cardsPreview(allPreview, cardPreview, cardProduct, filterInti) {
+function cardsPreview(allPreview, cardPreview, cardProduct, ctnFilter) {
     return cardProduct.forEach((card) => {
                 card.addEventListener('click', () => {
                     allPreview.style.display = 'flex'
-                    filterInti.forEach((f) => {
-                        f.style.zIndex = '1'
-                    })
+                    ctnFilter.style.zIndex = '1'
                     cardPreview.forEach((preview) => {
                         let nameProduct = preview.getAttribute('data-preview')
                         if(card.getAttribute('data-name') == nameProduct) {
@@ -200,15 +198,13 @@ function cardsPreview(allPreview, cardPreview, cardProduct, filterInti) {
             })
 }
 
-function btnClose(allPreview, cardPreview, closes, filterInti) {
+function btnClose(allPreview, cardPreview, closes, ctnFilter) {
     closes.forEach((cb) => {
     cb.addEventListener('click', () => {
         allPreview.style.display = 'none'
+        ctnFilter.style.zIndex = '5'
         cardPreview.forEach((card) => {
             card.style.display = 'none'
-        })
-        filterInti.forEach((f) => {
-            f.style.zIndex = '3'
         })
     })
 })
