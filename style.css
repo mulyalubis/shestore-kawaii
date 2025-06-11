@@ -855,11 +855,18 @@ main .product .filter-inti ul {
     }
 
     /* filter inti */
+    .product .filter-inti {
+        position: relative;
+        z-index: 9;
+    }
+    /* main .product .filter-inti ul {
+        flex-direction: column;
+    }
     .product .filter-inti ul li {
         user-select: none;
         touch-action: manipulation;
         padding: 1rem;
-    }
+    } */
 
     /* filter jenis */
     main .product .filter-jenis {
@@ -940,6 +947,12 @@ main .product .filter-inti ul {
     
 
     /* preview product */
+    /* .product .container-preview {
+        background-color: rgba(255, 0, 0, 0.2);
+    }
+    .product .container-preview:not([style*="display: flex"]) {
+        pointer-events: none !important;
+    } */
     .product .container-preview .card-preview {
         display: none;
         grid-template-areas: 'title img'
