@@ -75,54 +75,6 @@ function filterUtama(cardProduct, filterInti, filterBagian, tinggiProduct) {
     })
 }
 
-// function filterUtama(cardProduct, filterInti, filterBagian, tinggiProduct) {
-//     const evtName = 'ontouchstart' in window ? 'touchend' : 'click'
-
-//     return filterInti.forEach((filt) => {
-//         filt.addEventListener(evtName, (e) => {
-//             e.preventDefault();
-
-//             filterInti.forEach((i) => i.classList.remove('active'));
-//             filt.classList.add('active');
-
-//             tinggiProduct.style.height = '100%';
-//             filterBagian.style.display = 'block';
-//             filterBagian.style.animation = 'AnimateFilter 1s ease-out 1';
-
-//             const displayFilter = filt.getAttribute('data-pakaian');
-//             const filterBagianActive = document.querySelector('.filter-jenis ul li.active');
-//             let count = 0;
-
-//             cardProduct.forEach((card) => {
-//                 const pakaian = card.getAttribute('data-pakaian');
-//                 const kategori = card.getAttribute('data-category');
-//                 let isVisible = false;
-
-//                 if (filterBagianActive) {
-//                     const displayFilterBagian = filterBagianActive.getAttribute('data-filter');
-//                     if (pakaian === displayFilter && kategori === displayFilterBagian) {
-//                         isVisible = true;
-//                         count++;
-//                     }
-//                 } else {
-//                     if (pakaian === displayFilter && count < 4) {
-//                         isVisible = true;
-//                         count++;
-//                     }
-//                 }
-
-//                 if (isVisible) {
-//                     card.classList.add('active');
-//                     card.style.display = 'block';
-//                     card.style.animation = 'AnimateFilter .8s linear 1';
-//                 } else {
-//                     card.classList.remove('active');
-//                     card.style.display = 'none';
-//                 }
-//             });
-//         }, { passive: false });
-//     });
-// }
 
 
 function filterEmpat(cardProduct, containerProduct, filterEmpatBagian) {
@@ -204,13 +156,15 @@ fetch('datajson/preview.json')
 
         const cardPreview = document.querySelectorAll('.container-preview .card-preview')
         const cardProduct = document.querySelectorAll('.jenis-product .card-product')
+        const filterInti = document.querySelectorAll(".filter-inti ul li")
 
-        cardsPreview(allPreview, cardPreview, cardProduct)
+        cardsPreview(allPreview, cardPreview, cardProduct, filterInti )
+
 
         // button close 
         const closes = document.querySelectorAll('.close i')
         
-        btnClose(allPreview, cardPreview, closes)
+        btnClose(allPreview, cardPreview, closes, filterInti)
 
     })
 
@@ -229,10 +183,13 @@ function productPreview(prv, loopingPreview) {
 
 
 
-function cardsPreview(allPreview, cardPreview, cardProduct) {
+function cardsPreview(allPreview, cardPreview, cardProduct, filterInti) {
     return cardProduct.forEach((card) => {
                 card.addEventListener('click', () => {
                     allPreview.style.display = 'flex'
+                    filterInti.forEach((f) => {
+                        f.style.zIndex = '1'
+                    })
                     cardPreview.forEach((preview) => {
                         let nameProduct = preview.getAttribute('data-preview')
                         if(card.getAttribute('data-name') == nameProduct) {
@@ -243,12 +200,15 @@ function cardsPreview(allPreview, cardPreview, cardProduct) {
             })
 }
 
-function btnClose(allPreview, cardPreview, closes) {
+function btnClose(allPreview, cardPreview, closes, filterInti) {
     closes.forEach((cb) => {
     cb.addEventListener('click', () => {
         allPreview.style.display = 'none'
         cardPreview.forEach((card) => {
             card.style.display = 'none'
+        })
+        filterInti.forEach((f) => {
+            f.style.zIndex = '3'
         })
     })
 })
