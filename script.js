@@ -154,7 +154,7 @@ function filterEmpat(cardProduct, containerProduct, filterEmpatBagian) {
 
 
 // data product
-fetch('data-json/product.json')
+fetch('datajson/product.json')
     .then(response => response.json())
     .then(result => {
         let product = ''
@@ -177,12 +177,9 @@ fetch('data-json/product.json')
 
         // console.log("Jumlah filter inti:", filterInti.length)
 
-        document.addEventListener('DOMContentLoaded', () => {
-            filterUtama(cardProduct, filterInti, filterBagian, tinggiProduct);
-            filterEmpat(cardProduct, containerProduct, filterEmpatBagian)
-        });
-        // filterUtama(cardProduct, filterInti, filterBagian, tinggiProduct)
+        filterUtama(cardProduct, filterInti, filterBagian, tinggiProduct)
 
+        filterEmpat(cardProduct, containerProduct, filterEmpatBagian)
     })
 
 function elemenProduct(pdt, loopingName) {
@@ -194,7 +191,7 @@ function elemenProduct(pdt, loopingName) {
 }
 
 // data preview
-fetch('data-json/preview.json')
+fetch('datajson/preview.json')
     .then(response => response.json())
     .then(result => {
         let preview = ''
