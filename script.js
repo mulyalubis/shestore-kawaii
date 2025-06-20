@@ -217,6 +217,8 @@ function btnClose(allPreview, cardPreview, closes, ctnFilter) {
 const jnsPaket = document.querySelector('.jenis-paket')
 const paket = document.querySelectorAll('.jenis-paket .paket')
 
+const ctnFilter = document.querySelector(".filter-inti")
+
 const containerPrevPaket = document.querySelector('.preview-lengkap-usaha')
 const prevPaket = document.querySelectorAll('.preview-product')
 const arrowClose = document.querySelectorAll('.arrow-down-close')
@@ -228,6 +230,7 @@ paket.forEach((pkt) => {
             if(pkt.getAttribute('data-paket') == prodprev.getAttribute('data-prev-paket')) {
                 containerPrevPaket.style.display = 'block'
                 prodprev.style.display = 'grid'
+                ctnFilter.style.zIndex = '1'
                 setTimeout(() => {
                     containerPrevPaket.style.transform = 'translateY(0)'
                 }, 100)
@@ -241,6 +244,7 @@ arrowClose.forEach(function(close) {
     close.addEventListener('click', () => {
         prevPaket.forEach((paket) => {
             containerPrevPaket.style.transform = 'translateY(100%)'
+            ctnFilter.style.zIndex = '9'
             setTimeout(() => {
                 containerPrevPaket.style.display = 'none'
                 paket.style.display = 'none'
