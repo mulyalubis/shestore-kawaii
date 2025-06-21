@@ -71,7 +71,8 @@ header nav ul li a i {
 /* halaman profile dan 3 product */
 main .landing-page {
     width: 100%;
-    min-height: 110vh;
+    min-height: 100vh;
+    overflow-y: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding-top: 1.5rem;
