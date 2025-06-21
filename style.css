@@ -9,6 +9,12 @@ body {
     overflow-x: hidden;
 }
 
+/* information using the web in a pop up slider */
+
+
+
+
+
 /* navbar */
 
 header {
@@ -550,6 +556,7 @@ main .product .filter-inti ul {
     margin-top: 4rem;
     text-transform: uppercase;
     place-self: start center;
+    position: relative;
 }
 
 .paket-usaha .preview-lengkap-usaha .preview-paket {
@@ -575,33 +582,34 @@ main .product .filter-inti ul {
     height: 60px;
     width: 60px;
     position: absolute;
-    top: 8.5%;
+    top: -45%;
 }
 
 
-.paket-usaha .preview-lengkap-usaha :is(.kemeja-dan-blouse, .rajut-baru) .judul-preview img {
-    left: 28%;
+.paket-usaha .preview-lengkap-usaha .kemeja-dan-blouse .judul-preview img {
+    left: -14%;
 }
 
-.paket-usaha .preview-lengkap-usaha :is(.kemeja-dan-blouse, .rajut-baru) .judul-preview img:last-child {
-    left: 67%;
+.paket-usaha .preview-lengkap-usaha .kemeja-dan-blouse .judul-preview img:last-child {
+    left: 100%;
 }
 
 .paket-usaha .preview-lengkap-usaha .PU-rajut .judul-preview img {
-    left: 34%;
+    left: -20%;
 }
 
-.paket-usaha .preview-lengkap-usaha .PU-rajut .judul-preview img:last-child {
-    left: 61.2%;
+.paket-usaha .preview-lengkap-usaha :is(.PU-rajut, .paketan-combo-best, .rajut-baru) .judul-preview img:last-child {
+    left: 99%;
 }
 
-.paket-usaha .preview-lengkap-usaha :is(.paketan-combo-best, .rajut-baru) .judul-preview img {
-    left: 32.5%;
+.paket-usaha .preview-lengkap-usaha :is(.paketan-combo-best) .judul-preview img {
+    left: -17%;
 }
 
-.paket-usaha .preview-lengkap-usaha :is(.paketan-combo-best, .rajut-baru) .judul-preview img:last-child {
-    left: 62.7%;
+.paket-usaha .preview-lengkap-usaha .rajut-baru .judul-preview img {
+    left: -17.5%;
 }
+
 
 .paket-usaha .preview-lengkap-usaha .arrow-down-close {
     grid-area: close;
@@ -1129,7 +1137,7 @@ main .product .filter-inti ul {
 
 @media (max-width: 375px) {
     .paket-usaha {
-        min-height: 150vh;
+        min-height: 160vh;
     }
     .transaksi {
         left: 86%;
